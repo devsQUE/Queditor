@@ -1,0 +1,1 @@
+# Queditor.apk
