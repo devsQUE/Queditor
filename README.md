@@ -21,9 +21,12 @@ Queditor is a browser-based code editor with file & folder management, code auto
 - Offline support with local assets
 
 ## 📸 Screenshots
-![Homepage](assets/screenshots/homepage.png)
-![Editor](assets/screenshots/editor.png)
-![Preview](assets/screenshots/preview.png)
+![Homepage portrait](assets/screenshots/home (port).png)
+![Editor portrait](assets/screenshots/editor (port).png)
+![Preview portrait](assets/screenshots/preview (port).png)
+![Homepage landscape](assets/screenshots/home (land).png)
+![Editor landscape](assets/screenshots/editor (land).png)
+![Preview landscape](assets/screenshots/preview (land).png)
 
 ## 👤 Author
 **Mohammad Hussain**  
