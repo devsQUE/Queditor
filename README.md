@@ -1,4 +1,4 @@
-# Queditor- Code Editor
+# Queditor - A Code Editor
 
 Queditor is a browser-based code editor with file & folder management, code auto completion, code formating, preview, auto-save using IndexedDB, and offline support.
 
