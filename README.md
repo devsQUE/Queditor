@@ -29,13 +29,6 @@ Queditor is a browser-based code editor with file & folder management, code auto
   <img src="assets/screenshots/preview(port).png" alt="Preview portrait" style="width:200px; display:inline-block; margin-right:10px;">
 </div>
 
-<!-- Landscape Screenshots -->
-<div style="overflow-x: auto; white-space: nowrap; display: inline-block; margin-right: 5px; ">
-<img src="assets/screenshots/home(land).png" alt="Homepage landscape" width="500">
-<img src="assets/screenshots/editor(land).png" alt="Editor landscape" width="500">
-<img src="assets/screenshots/preview(land).png" alt="Preview landscape" width="500">
-</div>
-
 
 ## 👤 Developer
 **Mohammad Hussain**  
