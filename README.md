@@ -23,11 +23,12 @@ Queditor is a browser-based code editor with file & folder management, code auto
 ## 📸 Screenshots
 
 <!-- Portrait Screenshots -->
-<div style="overflow-x: auto; white-space: nowrap; display: flex; gap: 10px; padding-bottom: 10px;">
-  <img src="images/home_port.png" alt="Homepage portrait" style="width:200px; flex-grow: 0; flex-shrink: 0; margin-right: 10px;">
-  <img src="images/editor_port.png" alt="Editor portrait" style="width:200px; flex-grow: 0; flex-shrink: 0; margin-right: 10px;">
-  <img src="images/filemanager_port.png" alt="File Manager portrait" style="width:200px; flex-grow: 0; flex-shrink: 0; margin-right: 10px;">
-  <img src="images/preview_port.png" alt="Preview portrait" style="width:200px; flex-grow: 0; flex-shrink: 0;">
+<!-- Portrait Screenshots -->
+<div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
+  <img src="images/home_port.png" alt="Homepage portrait" style="width:200px; height:auto; margin-right:10px; flex:none; display:inline-block;">
+  <img src="images/editor_port.png" alt="Editor portrait" style="width:200px; height:auto; margin-right:10px; flex:none; display:inline-block;">
+  <img src="images/filemanager_port.png" alt="File Manager portrait" style="width:200px; height:auto; margin-right:10px; flex:none; display:inline-block;">
+  <img src="images/preview_port.png" alt="Preview portrait" style="width:200px; height:auto; flex:none; display:inline-block;">
 </div>
 
 
