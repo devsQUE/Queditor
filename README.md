@@ -37,7 +37,7 @@ Queditor is a browser-based code editor with file & folder management, code auto
 </div>
 
 
-## 👤 Author
+## 👤 Developer
 **Mohammad Hussain**  
 GitHub: [@devsQUE](https://github.com/devsQUE)
 
