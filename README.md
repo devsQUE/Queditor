@@ -29,12 +29,7 @@ Queditor is a browser-based code editor with file & folder management, code auto
   <img src="images/filemanager_port.png" alt="Queditor – File manager (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
   <img src="images/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
 </p>
-<p align="center">← Swipe horizontally on Android to see all screenshots.</p>
 
-<!-- Mobile swipe hint -->
-<div style="text-align: center; color: #666; font-size: 0.9em; margin: 10px 0;">
-  ↔️ Swipe horizontally on mobile to view all screenshots
-</div>
 
 ## 👤 Developer
 **Mohammad Hussain**  
