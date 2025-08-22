@@ -24,9 +24,9 @@ Queditor is a browser-based code editor with file & folder management, code auto
 
 <!-- Portrait Screenshots -->
 <div style="overflow-x: auto; white-space: nowrap; display: inline-block; margin-right: 5px; ">
-  <img src="assets/screenshots/home(port).png" alt="Homepage portrait" style="width:300px; display:inline-block; margin-right:10px;">
-  <img src="assets/screenshots/editor(port).png" alt="Editor portrait" style="width:300px; display:inline-block; margin-right:10px;">
-  <img src="assets/screenshots/preview(port).png" alt="Preview portrait" style="width:300px; display:inline-block; margin-right:10px;">
+  <img src="assets/screenshots/home(port).png" alt="Homepage portrait" style="width:200px; display:inline-block; margin-right:10px;">
+  <img src="assets/screenshots/editor(port).png" alt="Editor portrait" style="width:200px; display:inline-block; margin-right:10px;">
+  <img src="assets/screenshots/preview(port).png" alt="Preview portrait" style="width:200px; display:inline-block; margin-right:10px;">
 </div>
 
 <!-- Landscape Screenshots -->
