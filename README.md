@@ -1,5 +1,9 @@
 # Queditor - A Code Editor
 
+<p align="center">
+  <img src='images/logo.png' width='250'>
+</p>
+
 Queditor is a browser-based code editor with file & folder management, code auto completion, code formating, preview, auto-save using IndexedDB, and offline support.
 
 ## ⚙️ Features
