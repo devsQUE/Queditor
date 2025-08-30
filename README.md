@@ -1,7 +1,7 @@
 # Queditor - A Code Editor
 
 <p align="center">
-  <img src='images/logo.png' width='250'>
+  <img src='assets/images/logo.png' width='250'>
 </p>
 
 ## Overview 
@@ -29,10 +29,10 @@ Queditor is a browser-based code editor with file & folder management, code auto
 
 <!-- Portrait Screenshots -->
 <p align="center">
-  <img src="images/home_port.png" alt="Queditor – Home page (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
-  <img src="images/editor_port.png" alt="Queditor – Editor view (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
-  <img src="images/filemanager_port.png" alt="Queditor – File manager (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
-  <img src="images/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/home_port.png" alt="Queditor – Home page (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/editor_port.png" alt="Queditor – Editor view (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/filemanager_port.png" alt="Queditor – File manager (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
 </p>
 
 
