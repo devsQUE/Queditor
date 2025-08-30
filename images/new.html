@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Queditor — Android Code Editor</title>
+  <meta name="description" content="Queditor is a professional Android-focused code editor with projects, ZIP import/export, file management, preview, offline support and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Optional: use your local Font Awesome pack if you have one -->
+  <!-- <link rel="stylesheet" href="assets/css/all.min.css" /> -->
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #0f131b;
+      --muted: #9aa4b2;
+      --text: #e7eaf0;
+      --brand: #5b8cff;
+      --brand-2: #8a6bff;
+      --ring: rgba(91, 140, 255, .35);
+      --card: #0f131b;
+      --border: #1b2230;
+    }
+    * { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    .btn { display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.1rem; border-radius:14px; font-weight:600; border:1px solid var(--border); background:#111625; transition: .2s transform, .2s background;
+           box-shadow: 0 0 0 0 transparent; }
+    .btn:hover { transform: translateY(-1px); background:#141b2b; }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; }
+    .btn.ghost { background: transparent; }
+    header.nav { position: sticky; top:0; z-index: 50; backdrop-filter: saturate(120%) blur(10px); background: rgba(11,13,18,.6); border-bottom:1px solid var(--border); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo { display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px; }
+    .logo-mark { width:22px; height:22px; border-radius:6px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 6px 18px var(--ring); }
+    .nav-links { display:flex; gap:1rem; }
+    .nav-links a { padding:.5rem .8rem; border-radius:10px; color: var(--muted); }
+    .nav-links a:hover { background:#121827; color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 80px 0 50px; position: relative; overflow: hidden; }
+    .hero h1 { font-size: clamp(2rem, 2.5rem + 1.5vw, 3.5rem); line-height:1.1; margin: 0 0 16px; }
+    .hero p.sub { color: var(--muted); font-size: clamp(1rem, .9rem + .4vw, 1.15rem); max-width: 800px; }
+    .hero-cta { display:flex; gap:.8rem; flex-wrap:wrap; margin-top: 22px; }
+    .pill { display:inline-flex; gap:.5rem; align-items:center; padding:.45rem .7rem; border-radius:999px; border:1px solid var(--border); color: var(--muted); font-size:.9rem; }
+
+    /* Feature grid */
+    .section { padding: 70px 0; }
+    .section h2 { font-size: clamp(1.4rem, 1.1rem + .9vw, 2rem); margin:0 0 10px; }
+    .section p.lead { color: var(--muted); margin: 0 0 26px; }
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(12, 1fr); }
+    .card { grid-column: span 4; background: var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; transition: .2s transform, .2s box-shadow; box-shadow: 0 0 0 0 transparent; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+    .card h3 { font-size: 1.05rem; margin: 10px 0 6px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+    .badge { display:inline-block; padding:.28rem .55rem; border-radius:999px; border:1px solid var(--border); color: var(--muted); font-size:.75rem; }
+    @media (max-width: 900px){ .card{ grid-column: span 6; } }
+    @media (max-width: 640px){ .card{ grid-column: span 12; } }
+
+    /* Screenshots */
+    .shots { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
+    .shots img { width:100%; height:auto; border-radius:16px; border:1px solid var(--border); background:#0c0f15; }
+    .shot { grid-column: span 4; }
+    @media (max-width: 900px){ .shot{ grid-column: span 6; } }
+    @media (max-width: 640px){ .shot{ grid-column: span 12; } }
+
+    /* Footer */
+    footer { padding: 40px 0; border-top:1px solid var(--border); color: var(--muted); }
+
+    /* Tiny helper */
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="assets/images/logo.png">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Queditor</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill">Android-focused • Offline-first • IndexedDB</span>
+      <h1>Professional code editor for Android, built for real projects.</h1>
+      <p class="sub">Create and manage projects, import/export as ZIP, preview your <code>index.html</code>, and work entirely offline with local assets. Queditor is fast, clean, and reliable.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#download" aria-label="Download Queditor">
+          <span>Download</span>
+        </a>
+        <a class="btn ghost" href="https://github.com/" target="_blank" rel="noreferrer noopener" aria-label="View on GitHub">
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Everything you need to build on‑device</h2>
+      <p class="lead">Core capabilities designed around Android workflows and an offline‑first architecture.</p>
+
+      <div class="grid">
+        <!-- Projects -->
+        <div class="card"><span class="badge">Projects</span>
+          <h3>Create & manage projects</h3>
+          <p>Organize multiple projects inside the app with a clean, modular file tree.</p>
+        </div>
+        <div class="card"><span class="badge">ZIP</span>
+          <h3>Import ZIP as project</h3>
+          <p>Bring an existing project in one step. Folders and files are reconstructed automatically.</p>
+        </div>
+        <div class="card"><span class="badge">ZIP</span>
+          <h3>Export project as ZIP</h3>
+          <p>Share or back up your work instantly with a single ZIP export.</p>
+        </div>
+
+        <!-- File management -->
+        <div class="card"><span class="badge">Files</span>
+          <h3>Add, rename, delete file/folder</h3>
+          <p>Full CRUD for files & folders directly from the global toolbar.</p>
+        </div>
+        <div class="card"><span class="badge">Drag & Drop</span>
+          <h3>Copy via drag & drop</h3>
+          <p>Drop while holding copy gesture to duplicate files/folders where you want them.</p>
+        </div>
+        <div class="card"><span class="badge">Drag & Drop</span>
+          <h3>Move via drag & drop</h3>
+          <p>Reorganize your tree by dragging items into new folders—fast and precise.</p>
+        </div>
+
+        <!-- Editing -->
+        <div class="card"><span class="badge">Import</span>
+          <h3>Import file</h3>
+          <p>Bring single files into any project without touching the rest of the tree.</p>
+        </div>
+        <div class="card"><span class="badge">Editor</span>
+          <h3>Syntax highlighting</h3>
+          <p>Readable code with language‑aware highlighting for web stacks and more.</p>
+        </div>
+        <div class="card"><span class="badge">Editor</span>
+          <h3>Auto completion</h3>
+          <p>Smarter editing with suggestions as you type.</p>
+        </div>
+        <div class="card"><span class="badge">Formatter</span>
+          <h3>Code formatting</h3>
+          <p>Keep your code tidy and consistent with built‑in formatting.</p>
+        </div>
+        <div class="card"><span class="badge">History</span>
+          <h3>Undo / Redo</h3>
+          <p>Fearless editing with multi‑step undo and redo controls.</p>
+        </div>
+        <div class="card"><span class="badge">Find</span>
+          <h3>Search & replace</h3>
+          <p>Locate and rewrite across the open file quickly.</p>
+        </div>
+
+        <!-- Storage & Preview -->
+        <div class="card"><span class="badge">Storage</span>
+          <h3>Auto‑save to IndexedDB</h3>
+          <p>Your work is preserved continuously in the background.</p>
+        </div>
+        <div class="card"><span class="badge">Storage</span>
+          <h3>Manual save to IndexedDB</h3>
+          <p>Prefer control? Save on demand from the toolbar.</p>
+        </div>
+        <div class="card"><span class="badge">Preview</span>
+          <h3>Project preview (index.html)</h3>
+          <p>Instant run: preview your project by loading <code>index.html</code>.</p>
+        </div>
+        <div class="card"><span class="badge">Offline</span>
+          <h3>Offline support</h3>
+          <p>Works without internet using local assets and cached resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="section">
+    <div class="container">
+      <h2>See it in action</h2>
+      <p class="lead">UI designed to stay out of your way while you code.</p>
+      <div class="shots">
+        <picture class="shot">
+          <img src="assets/screenshots/homepage.png" alt="Queditor homepage screenshot" loading="lazy" />
+        </picture>
+        <picture class="shot">
+          <img src="assets/screenshots/editor.png" alt="Queditor editor screenshot" loading="lazy" />
+        </picture>
+        <picture class="shot">
+          <img src="assets/screenshots/readme-preview.png" alt="Queditor preview screenshot" loading="lazy" />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download / CTA -->
+  <section id="download" class="section">
+    <div class="container">
+      <h2>Get Queditor</h2>
+      <p class="lead">Grab the latest build or browse the source.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#" aria-label="Download APK">Download APK</a>
+        <a class="btn" href="#" aria-label="Download from Play Store">Google Play</a>
+        <a class="btn ghost" href="https://github.com/" target="_blank" rel="noreferrer noopener" aria-label="View source on GitHub">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+      <p>© <span id="year"></span> Queditor • MIT License</p>
+      <p>Made with ❤ for developers</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
