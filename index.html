@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Queditor – Android Code Editor</title>
+    <meta
+      name="description"
+      content="Queditor is a professional Android-focused code editor with projects, ZIP import/export, file management, preview, offline support and more."
+    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:wght@400;700&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" />
+    <meta property="og:title" content="Queditor – Android Code Editor" />
+    <meta name="theme-color" content="#282A36" />
+
+    <meta
+      property="og:description"
+      content="A professional Android-focused code editor with project management, syntax highlighting, preview, and offline support."
+    />
+    <meta property="og:image" content="assets/images/logo.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="logo" href="#">
+          <span>Queditor</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#download">Download</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <header class="hero" id="download">
+      <div class="container">
+        <!-- <h1 class="logo">Queditor</h1>
+        <p class="tagline">A professional Android-focused code editor.</p> -->
+        <div class="cta">
+          <a
+            href="https://github.com/devsQUE/Queditor/releases/tag/Queditor"
+            class="btn primary"
+            ><i class="fa-solid fa-download"></i>
+            <h3>Download Now</h3>
+          </a>
+          <a
+            href="https://github.com/devsQUE/Queditor"
+            target="_blank"
+            class="btn secondary"
+          >
+            <i class="fab fa-github"></i>
+            <h3>View on GitHub</h3>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2>About Queditor</h2>
+        <p>
+          Queditor is built for Android developers who want a powerful, clean,
+          and reliable code editing experience. With modular design, file
+          management, and live preview, it’s your go-to tool for coding on the
+          go.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="grid">
+          <div class="card">
+            <i class="fa-solid fa-plus"></i>
+            <h3>Create & manage projects</h3>
+            <p>
+              Organize multiple projects inside the app with a clean, modular
+              file tree.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-folder-open"></i>
+            <h3>File Management</h3>
+            <p>Add, rename, delete, and organize files & folders with ease.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-file-import"></i>
+            <h3>Import ZIP as project</h3>
+            <p>
+              Bring an existing project in one step. Folders and files are
+              reconstructed automatically.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-file-export"></i>
+            <h3>Export project as ZIP</h3>
+            <p>
+              Share or back up your work instantly with a single ZIP export.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-save"></i>
+            <h3>Auto-Save</h3>
+            <p>
+              Your code is always safe with built-in auto-save powered by
+              IndexedDB.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-highlighter"></i>
+            <h3>Syntax highlighting</h3>
+            <p>
+              Readable code with language‑aware highlighting for web stacks and
+              more.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-magic"></i>
+            <h3>Auto completion</h3>
+            <p>Smarter editing with suggestions as you type.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-code-branch"></i>
+            <h3>Code formatting</h3>
+            <p>Keep your code tidy and consistent with built‑in formatting.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Code Preview</h3>
+            <p>Instant preview of your projects (Only index.html)</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-rotate-left"></i>
+            <h3>Undo / Redo</h3>
+            <p>Fearless editing with multi‑step undo and redo controls.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Search & replace</h3>
+            <p>Locate and rewrite across the open file quickly.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-copy"></i>
+            <h3>Copy / Move via drag & drop</h3>
+            <p>
+              Drag and drop to copy or move files/folders where you want them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+      <div class="container">
+        <h1>Screenshots</h1>
+        <div class="gallery">
+          <img
+            src="assets/screenshots/home_port.png"
+            alt="Homepage"
+            class="preview-img"
+          />
+          <img
+            src="assets/screenshots/editor_port.png"
+            alt="Editor"
+            class="preview-img"
+          />
+          <img
+            src="assets/screenshots/filemanager_port.png"
+            alt="File Manager"
+            class="preview-img"
+          />
+          <img
+            src="assets/screenshots/preview_port.png"
+            alt="Preview"
+            class="preview-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div id="imgModal" class="img-modal">
+      <span class="close"><i class="fa-solid fa-xmark"></i></span>
+      <img class="modal-content" id="modalImage" />
+      <div id="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <!-- <img
+            src="assets/images/devsque-logo.png"
+            alt="devsQUE Logo"
+            class="footer-logo"
+          /> -->
+          <img
+            src="assets/images/devsQUE.svg"
+            alt="devsQUE Logo"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-links">
+          <a href="legal.html#license"
+            >© <span id="year"></span> devsQUE /</a
+          >
+          <a href="legal.html#privacy">Privacy Policy /</a>
+          <a href="legal.html#terms">Terms & Conditions /</a>
+          <a href="legal.html#disclaimer">Disclaimer /</a>
+          <a href="legal.html#eula">EULA /</a>
+        </div>
+
+        <div class="footer-right">
+          <p>Made with <i class="fa-solid fa-heart"></i> for developers.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Dynamic year for footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <script>
+      const modal = document.getElementById("imgModal");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.querySelector(".img-modal .close");
+
+      // Add click listener to all preview images
+      document.querySelectorAll(".preview-img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          captionText.innerHTML = img.alt;
+        });
+      });
+
+      // Close modal on "X" click
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close modal on outside click
+      modal.onclick = function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
