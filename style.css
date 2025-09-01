@@ -312,6 +312,7 @@
 
     .dl-wrap {
         margin: 0 auto;
+        max-width: 1200px;
     }
 
     .dl-head {
@@ -331,6 +332,7 @@
 
     .dl-grid {
         display: flex;
+        /* justify-content: space-between; */
         justify-content: center;
     }
 
@@ -339,9 +341,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 50px;
         padding: 15px;
         border-radius: 14px;
+        margin: 20px;
         background: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.06);
         transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
@@ -529,23 +531,25 @@
             align-items: center;
             flex-direction: column;
         }
+
         .store-card {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        padding: 15px;
-        border-radius: 14px;
-        background: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-        text-decoration: none;
-        color: inherit;
-    }
-    .store-card img {
-        height: 80px;
-    }
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .store-card img {
+            height: 80px;
+        }
 
         .features .grid {
             display: flex;
