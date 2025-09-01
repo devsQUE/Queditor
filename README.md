@@ -35,10 +35,14 @@ Queditor is a browser-based code editor with file & folder management, code auto
   <img src="assets/screenshots/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
 </p>
 
+<!-- Download Links -->
+<p align="center">
+  <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/badges/play.svg" alt="Get it on Playstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+  <img src="assets/images/badges/appstore.svg" alt="Download on App store" width="200" style="margin: 0 10px; border-radius: 20px;">
+</p>
+
 
 ## 👤 Developer
 **Mohammad Hussain**  
 GitHub: [@devsQUE](https://github.com/devsQUE)
-
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
