@@ -38,10 +38,17 @@ Queditor is a browser-based code editor with file & folder management, code auto
 ## Download Links
 <!-- Download Links -->
 <p align="center">
-  <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
-  <img src="assets/images/badges/play.svg" alt="Get it on Playstore" width="200" style="margin: 0 10px; border-radius: 20px;">
-  <img src="assets/images/badges/appstore.svg" alt="Download on App store" width="200" style="margin: 0 10px; border-radius: 20px;">
+  <a href="https://www.indusappstore.com/apps/tools/queditor/com.devsque.queditor?page=details&id=com.devsque.queditor" target="_blank">
+    <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+  </a>
+  <!-- <a href="#" target="_blank">
+    <img src="assets/images/badges/play.svg" alt="Get it on Playstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+  </a>
+  <a href="#" target="_blank">
+    <img src="assets/images/badges/appstore.svg" alt="Download on App store" width="200" style="margin: 0 10px; border-radius: 20px;">
+  </a> -->
 </p>
+
 
 
 ## 👤 Developer
