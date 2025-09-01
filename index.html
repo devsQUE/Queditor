@@ -229,14 +229,6 @@
           <img src="assets/images/badges/appstore.svg" alt="Download on the App Store" />
         <span class="tag">Coming soon</span>
       </a>
-
-
-    </div>
-
-    <!-- Optional: small QR area -->
-    <div class="dl-qr">
-      <img src="assets/images/qr/indus.png" alt="QR for Google Play" id="qr-img">
-      <p id="qr-caption">Scan to open on your device</p>
     </div>
   </div>
 </section>
@@ -312,46 +304,6 @@
         }
       };
     </script>
-    <script>
-  // highlight card based on platform
-  (function () {
-    const ua = navigator.userAgent.toLowerCase();
-    const google = document.getElementById('store-google');
-    const apple  = document.getElementById('store-apple');
-    const indus  = document.getElementById('store-indus');
-    const cards = [google, apple, indus];
-
-    function hi(card) {
-      cards.forEach(c => c && c.classList.remove('hi'));
-      if (card) {
-        card.style.outline = '2px solid #0d6efd';
-        card.style.outlineOffset = '3px';
-        setTimeout(()=>{ card.style.outline=''; card.style.outlineOffset=''; }, 1800);
-      }
-    }
-
-    if (/iphone|ipad|ipod|macintosh.*arm/.test(ua)) hi(apple);
-    else if (/android/.test(ua)) hi(google);
-    else hi(indus); // desktop default
-
-    // Optional: swap QR based on highlight
-    const qr = document.getElementById('qr-img');
-    const caption = document.getElementById('qr-caption');
-    function setQR(src, text) {
-      if (!qr) return;
-      qr.src = src;
-      if (caption) caption.textContent = text;
-    }
-    if (/iphone|ipad|ipod|macintosh.*arm/.test(ua)) {
-      setQR('assets/images/qr/appstore.png', 'Scan to open on App Store');
-    } else if (/android/.test(ua)) {
-      setQR('assets/images/qr/play.png', 'Scan to open on Google Play');
-    } else {
-      setQR('assets/images/qr/indus.png', 'Scan to open on Indus Appstore');
-    }
-  })();
-</script>
-
   </body>
 </html>
 

@@ -311,7 +311,6 @@
     }
 
     .dl-wrap {
-        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -340,7 +339,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px;
+        margin: 50px;
         padding: 15px;
         border-radius: 14px;
         background: #ffffff;
@@ -527,6 +526,7 @@
         .dl-grid {
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
         .store-card {
@@ -534,15 +534,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px;
+        margin: 10px;
         padding: 15px;
-        width: 270px;
         border-radius: 14px;
         background: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.06);
         transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
         text-decoration: none;
         color: inherit;
+    }
+    .store-card img {
+        height: 50px;
     }
 
         .features .grid {
