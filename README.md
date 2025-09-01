@@ -35,6 +35,7 @@ Queditor is a browser-based code editor with file & folder management, code auto
   <img src="assets/screenshots/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
 </p>
 
+## Download Links
 <!-- Download Links -->
 <p align="center">
   <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
