@@ -35,7 +35,7 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="logo" href="#">
-          <span>Queditor</span>
+          <span>QUEDITOR</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="#features">Features</a>
@@ -343,13 +343,36 @@
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Mobile nav toggle
-      const toggleBtn = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      toggleBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+const toggleBtn = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+// Toggle menu when clicking the button
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // stop event from reaching document
+  navLinks.classList.toggle("active");
+});
+
+// Close menu when clicking anywhere outside
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !toggleBtn.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+  }
+});
+
+// (Optional) Close menu when clicking on a link inside
+// navLinks.querySelectorAll("a").forEach(link => {
+//   link.addEventListener("click", () => {
+//     navLinks.classList.remove("active");
+//   });
+// });
+
+
     </script>
-    
+
     <script>
       const modal = document.getElementById("imgModal");
       const modalImg = document.getElementById("modalImage");
