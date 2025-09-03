@@ -4,7 +4,7 @@
   <img src='assets/images/logo.png' width='250'>
 </p>
 
-## Overview 
+## ✨ Overview 
 Queditor is a browser-based code editor with file & folder management, code auto completion, code formating, preview, auto-save using IndexedDB, and offline support.
 
 ## ⚙️ Features
@@ -35,7 +35,7 @@ Queditor is a browser-based code editor with file & folder management, code auto
   <img src="assets/screenshots/preview_port.png" alt="Queditor – Live preview (portrait view)" width="300" style="margin: 0 10px; border-radius: 20px;">
 </p>
 
-## Download Links
+## 🔗 Download Links
 <!-- Download Links -->
 <p align="center">
   <a href="https://www.indusappstore.com/apps/tools/queditor/com.devsque.queditor?page=details&id=com.devsque.queditor" target="_blank">
