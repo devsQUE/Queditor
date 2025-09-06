@@ -41,6 +41,7 @@
           <a href="#features">Features</a>
           <a href="#screenshots">Screenshots</a>
           <a href="#download">Download</a>
+          <a href="#suggestions">Suggestions</a>
         </nav>
         <button class="menu-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
@@ -208,7 +209,7 @@
     <section class="download" id="download">
       <div class="container dl-wrap">
         <div class="dl-head">
-          <h2>Get Queditor</h2>
+          <h2><i class="fa-solid fa-download"></i> Get Queditor</h2>
           <p>Choose your store to download the app</p>
         </div>
 
@@ -225,7 +226,6 @@
               src="assets/images/badges/indus.png"
               alt="Get it on Indus Appstore"
             />
-            <span class="tag">Available now</span>
           </a>
 
           <!-- Github -->
@@ -241,14 +241,13 @@
               src="assets/images/badges/github.svg"
               alt="Available on Github"
             />
-            <span class="tag">Available Now</span>
           </a>
 
           <!-- Amazon Appstore -->
           <a
-            class="store-card disabled"
+            class="store-card"
             id="store-amazon"
-            href="#"
+            href="https://www.amazon.com/gp/product/B0FQ2WLVNM"
             target="_blank"
             rel="noopener"
           >
@@ -256,22 +255,6 @@
               src="assets/images/badges/amazon.svg"
               alt="Available at Amazon Appstore"
             />
-            <span class="tag">Coming soon</span>
-          </a>
-
-          <!-- F-Droid -->
-          <a
-            class="store-card disabled"
-            id="store-fdroid"
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            <img
-              src="assets/images/badges/fdroid.svg"
-              alt="Get it on F-Droid"
-            />
-            <span class="tag">Coming soon</span>
           </a>
 
           <!-- Google Play -->
@@ -308,6 +291,31 @@
       </div>
     </section>
 
+    <!-- Suggestion Form -->
+    <div class="suggestion-container" id="suggestions">
+      <h2><i class="fa-solid fa-lightbulb"></i> Share Your Suggestions</h2>
+      <p>We’d love to hear your feedback. Please fill out the form below.</p>
+
+      <form id="suggestionForm">
+        <div class="form-group">
+          <label for="message">Your Suggestion</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your suggestion here..."
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">
+          <span class="btn-text">Submit</span>
+          <span class="loader"></span>
+        </button>
+      </form>
+      <div id="formMessage" class="form-message"></div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-content">
@@ -343,34 +351,25 @@
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Mobile nav toggle
-const toggleBtn = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
 
-// Toggle menu when clicking the button
-toggleBtn.addEventListener("click", (e) => {
-  e.stopPropagation(); // stop event from reaching document
-  navLinks.classList.toggle("active");
-});
+      // Toggle menu when clicking the button
+      toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // stop event from reaching document
+        navLinks.classList.toggle("active");
+      });
 
-// Close menu when clicking anywhere outside
-document.addEventListener("click", (e) => {
-  if (
-    navLinks.classList.contains("active") &&
-    !navLinks.contains(e.target) &&
-    !toggleBtn.contains(e.target)
-  ) {
-    navLinks.classList.remove("active");
-  }
-});
-
-// (Optional) Close menu when clicking on a link inside
-// navLinks.querySelectorAll("a").forEach(link => {
-//   link.addEventListener("click", () => {
-//     navLinks.classList.remove("active");
-//   });
-// });
-
-
+      // Close menu when clicking anywhere outside
+      document.addEventListener("click", (e) => {
+        if (
+          navLinks.classList.contains("active") &&
+          !navLinks.contains(e.target) &&
+          !toggleBtn.contains(e.target)
+        ) {
+          navLinks.classList.remove("active");
+        }
+      });
     </script>
 
     <script>
@@ -399,6 +398,55 @@ document.addEventListener("click", (e) => {
           modal.style.display = "none";
         }
       };
+    </script>
+    <script>
+      document
+        .getElementById("suggestionForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const loader = submitBtn.querySelector(".loader");
+          const btnText = submitBtn.querySelector(".btn-text");
+          const formMessage = document.getElementById("formMessage");
+
+          // Show loader
+          btnText.textContent = "Submitting...";
+          loader.style.display = "inline-block";
+          submitBtn.disabled = true;
+          formMessage.style.display = "none";
+
+          const formData = Object.fromEntries(new FormData(e.target).entries());
+
+          try {
+            // TODO: Replace with your Power Automate / Apps Script URL
+            await fetch(
+              "https://script.google.com/macros/s/AKfycbw_HWR9XzXxsit7dPV5s-tMsM4cL4lgv0nFOF4ExKw7n1WZD3afZwi6Uv0Lkfmp1Cy4hg/exec",
+              {
+                method: "POST",
+                body: JSON.stringify(formData),
+              }
+            );
+
+            // Success message
+            formMessage.textContent =
+              "Thank you! Your suggestion has been recorded.";
+            formMessage.className = "form-message success";
+            formMessage.style.display = "block";
+            e.target.reset();
+          } catch (error) {
+            // Error message
+            formMessage.textContent =
+              "Something went wrong. Please try again.";
+            formMessage.className = "form-message error";
+            formMessage.style.display = "block";
+          }
+
+          // Hide loader
+          btnText.textContent = "Submit";
+          loader.style.display = "none";
+          submitBtn.disabled = false;
+        });
     </script>
   </body>
 </html>
