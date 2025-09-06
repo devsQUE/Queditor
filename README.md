@@ -39,10 +39,10 @@ Queditor is a browser-based code editor with file & folder management, code auto
 <!-- Download Links -->
 <p align="center">
   <a href="https://www.indusappstore.com/apps/tools/queditor/com.devsque.queditor?page=details&id=com.devsque.queditor" target="_blank">
-    <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+    <img src="assets/images/badges/indus.png" alt="Available on Indus appstore" width="200" style="margin: 0 20px;">
   </a>
   <a href="https://www.amazon.com/gp/product/B0FQ2WLVNM" target="_blank">
-    <img src="assets/images/badges/amazon.svg" alt="Available at Amazon Appstore" width="200" style="margin: 0 10px; border-radius: 20px;">
+    <img src="assets/images/badges/amazon.svg" alt="Available at Amazon Appstore" width="200" style="margin: 0 20px; border-radius: 20px;">
   </a>
 </p>
 
